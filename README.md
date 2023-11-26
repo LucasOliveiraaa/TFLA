@@ -5,21 +5,21 @@ You can configure the TFLA algorithm manualy or use the TFLA CC to compile a TFL
 
 Here is a file map reference:
 
-tfla - Here lives the TFLA Algorithm
-├─ src - This folder have all source code to TFLA Algorithm.
-│   ├─ tfla_cc - Here lives the TFLA CC, or, TFLA Config "Compiler"
-│   │   ├─ src - The source code to TFLA TFLA CC
-│   │   │   ├─ main.rs - Manager all modules to execute in harmony
-│   │   │   ├─ assembler.rs - Have all logic to parse Assemblers
-│   │   │   ├─ periferic.rs - Have others implementation, like structs
-│   │   │   └─ impl.rs - Have the main implemantation of the TFLA CC
-│   │   ├─ Cargo.toml
-│   │   ├─ Cargo.lock
-│   │   ├─ LICENSE
-│   │   └─ README.md
-│   ├─ main.rs - Have the implemantation of the TFLA Tokenizer
-│   └─ ast.rs - Have the implemantation of the TFLA ASTGen
-├─ Cargo.toml
-├─ Cargo.lock
-├─ LICENSE
-└─ README.md
+tfla - Here lives the TFLA Algorithm<br>
+├─ src - This folder have all source code to TFLA Algorithm.<br>
+│   ├─ tfla_cc - Here lives the TFLA CC, or, TFLA Config "Compiler"<br>
+│   │   ├─ src - The source code to TFLA TFLA CC<br>
+│   │   │   ├─ main.rs - Manager all modules to execute in harmony<br>
+│   │   │   ├─ assembler.rs - Have all logic to parse Assemblers<br>
+│   │   │   ├─ periferic.rs - Have others implementation, like structs<br>
+│   │   │   └─ impl.rs - Have the main implemantation of the TFLA CC<br>
+│   │   ├─ Cargo.toml<br>
+│   │   ├─ Cargo.lock<br>
+│   │   ├─ LICENSE<br>
+│   │   └─ README.md<br>
+│   ├─ main.rs - Have the implemantation of the TFLA Tokenizer<br>
+│   └─ ast.rs - Have the implemantation of the TFLA ASTGen<br>
+├─ Cargo.toml<br>
+├─ Cargo.lock<br>
+├─ LICENSE<br>
+└─ README.md<br>
