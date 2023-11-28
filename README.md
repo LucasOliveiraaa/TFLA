@@ -9,10 +9,10 @@ tfla - Here lives the TFLA Algorithm
 ├─ src - This folder have all source code to TFLA Algorithm.
 │   ├─ tfla_cc - Here lives the TFLA CC, or, TFLA Config "Compiler"
 │   │   ├─ src - The source code to TFLA TFLA CC
-│   │   │   ├─ main.rs - Manager all modules to execute in harmony
-│   │   │   ├─ assembler.rs - Have all logic to parse Assemblers
-│   │   │   ├─ periferic.rs - Have others implementation, like structs
-│   │   │   └─ impl.rs - Have the main implemantation of the TFLA CC
+│   │   │   │   └─ tfla.rs - The TFLA Tokenizer used by TFLA CC
+│   │   │   ├─ compiler - Manager all modules to execute in harmony
+│   │   │   ├─ main.rs - Manager and configure TFLA CC to execute in harmony
+│   │   │   └─ compiler.rs - Have the main implemantation of the TFLA CC
 │   │   ├─ Cargo.toml
 │   │   ├─ Cargo.lock
 │   │   ├─ LICENSE

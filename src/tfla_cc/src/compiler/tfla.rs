@@ -1,19 +1,3 @@
-fn main() {
-    let mut searchers: Vec<(&str, &str)> = vec![];
-
-    searchers.push(("SPACE", r"^\s"));
-    searchers.push(("NEW_LINE", r"^(\r)?\n"));
-    searchers.push(("Entity", r"^\w+"));
-
-    let mut tokenizer: TFLA = TFLA::new(searchers, vec![], false);
-
-    tokenizer.tokenize("test\ntes t\nte st\nt est");
-
-    for token in tokenizer.tokens {
-        print!("{}", token.content);
-    }
-}
-
 use regex::Regex;
 
 #[derive(Debug, Copy, Clone)]
