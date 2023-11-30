@@ -1,5 +1,12 @@
 # TFLA CC 
-TFLA CC means TFLA Configuration "Compiler", it's convert a TFLAC file to a list of Searchers and Assemblers to the TFLA Algorithm.
+TFLA CC means TFLA Configuration "Compiler", it's to convert a TFLAC file to a list of Searchers and Assemblers to the TFLA Algorithm.
+
+## Installation
+You can install TFLA CC using the installation tool, you can do that using one of those commands 
+<br>
+curl: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
+wget: `sh -c "$(wget -O- https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
+fetch: `sh -c "$(fetch -o- https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
 
 ## Help
 TFLA CC - TFLA Config \"Compiler\"<br>
