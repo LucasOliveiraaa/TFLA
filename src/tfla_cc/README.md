@@ -1,6 +1,31 @@
 # TFLA CC 
 TFLA CC means TFLA Configuration "Compiler", it's convert a TFLAC file to a list of Searchers and Assemblers to the TFLA Algorithm.
 
+## Help
+TFLA CC - TFLA Config \"Compiler\"<br>
+<br>
+tfla-cc \<command> [arguments]<br>
+<br>
+General Commands:<br>
+    --help | -h <br>
+        Arguments: [command]<br>
+        Show this message or show the help of some command.<br>
+    --digest | -d<br>
+        Arguments: \<path> [-a] [-w|-W] [output]<br>
+        Compile a TFLAC source and show the result.<br>
+    --analyse | -a <br>
+        Arguments: \<path><br>
+        Just analyse the source code to syntax and impossible cases.<br>
+    --compile | -c <br>
+        Arguments: \<path><br>
+        Compile the passed source code with type .tflac to an .exaust.tfla file with same name.<br>
+        aka tfla-cc -d \<path> -a -W<br>
+<br>
+--digest | -d <br>
+    -a - Analyse the TFLAC file.<br>
+    -w \<output> - Write the result in the passed output file.<br>
+    -W - Write the result in a .exauts.tfla file with same name of inut file.<br>
+
 # TFLAC
 The TFLAC (TFLA Configuration) language defines a set of rules for the recognition and construction of tokens and abstract syntax trees (ASTs). Let's explore the details of this language.
 
