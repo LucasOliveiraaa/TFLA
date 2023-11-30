@@ -1,5 +1,37 @@
 # TFLA CC 
-TFLA CC means TFLA Configuration "Compiler", it's convert a TFLAC file to a list of Searchers and Assemblers to the TFLA Algorithm.
+TFLA CC means TFLA Configuration "Compiler", it's to convert a TFLAC file to a list of Searchers and Assemblers to the TFLA Algorithm.
+
+## Installation
+You can install TFLA CC using the installation tool, you can do that using one of those commands 
+<br>
+curl: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
+wget: `sh -c "$(wget -O- https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
+fetch: `sh -c "$(fetch -o- https://raw.githubusercontent.com/LucasOliveiraaa/TFLA/main/src/tfla_cc/tools/install.sh)"`
+
+## Help
+TFLA CC - TFLA Config \"Compiler\"<br>
+<br>
+tfla-cc \<command> [arguments]<br>
+<br>
+General Commands:<br>
+&emsp;--help | -h <br>
+&emsp;&emsp;Arguments: [command]<br>
+&emsp;&emsp;Show this message or show the help of some command.<br>
+&emsp;--digest | -d<br>
+&emsp;&emsp;Arguments: \<path> [-a] [-w|-W] [output]<br>
+&emsp;&emsp;Compile a TFLAC source and show the result.<br>
+&emsp;--analyse | -a <br>
+&emsp;&emsp;Arguments: \<path><br>
+&emsp;&emsp;Just analyse the source code to syntax and impossible cases.<br>
+&emsp;--compile | -c <br>
+&emsp;&emsp;Arguments: \<path><br>
+&emsp;&emsp;Compile the passed source code with type .tflac to an .exaust.tfla file with same name.<br>
+&emsp;&emsp;aka tfla-cc -d \<path> -a -W<br>
+<br>
+--digest | -d <br>
+&emsp;-a - Analyse the TFLAC file.<br>
+&emsp;-w \<output> - Write the result in the passed output file.<br>
+&emsp;-W - Write the result in a .exauts.tfla file with same name of inut file.<br>
 
 # TFLAC
 The TFLAC (TFLA Configuration) language defines a set of rules for the recognition and construction of tokens and abstract syntax trees (ASTs). Let's explore the details of this language.
@@ -52,6 +84,13 @@ If it is necessary to add different options for an Assembler, such as alternativ
 <my_assembler>  :  second possibility
 ```
 
+You can remove the rule name and use "|" instead of ":":
+```tflac
+<my_assembler>  :  first possibility
+                :  second possibility
+                |  third possibility
+```
+
 If an Assembler can always be optional, use the symbol ε as an option:
 ```tflac
 <my_assembler>  :  first possibility
@@ -62,7 +101,7 @@ Here, the Assembler \<my_assembler> can always be optional, as one of its option
 
 #### Symbols
 1. `(arguments)`: Create a group of arbitrary arguments.
-2. `(... | ...)`: Create a choise of two or more possibilities of group of arbitrary arguments(TFLA 0.1.8 support this).
+2. `(... | ...)`: Create a choise of two or more possibilities of group of arbitrary arguments.
 3. `(arguments)?`: Indicates that the argument sequence is optional.
 4. `(arguments)...`: Indicates that the argument sequence can repeat indefinitely.
 5. `(arguments)+`: Indicates that the argument sequence can repeat 1 or more times.
@@ -80,9 +119,9 @@ TFLAC contains pre-defined symbols to facilitate the writing of grammar rules. A
 5. `:noh:`: Represents a null character (\0).
 6. `:num:`: Represents a number.
 
-TFLA CC latest implement a way to users to create your own symbols using the in-line regex, the sintax of an in-line regex is simple, the name of the custom symbol must be enclosed by angle brackets, de atribuition symbol is colon-r(:r) instead of just a colon(:) and the arbitrary is a regular expression. Here is an example:
+TFLA CC latest implement a way to users to create your own symbols using the in-line regex, the sintax of an in-line regex is simple, the name of the custom symbol must be enclosed by colons, the atribuition symbol is colon-r(:r) or just a colon(:) and the arbitrary is a regular expression. Here is an example:
 ```tflac
-<identify_new_line> :r (\r)?\n
+:identify_new_line: :r (\r)?\n
 ```
 
 To use your custom symbol, you need to enclose the symbol name with colons:
@@ -157,4 +196,6 @@ There is inconsistency in the rules, as the if-then structure may or may not hav
 ```
 The grammar allows exponentiation (^), making it more complex than desired for a simple language.
 
-<strong>NOTE: TFLA 0.1.8 (latest) DOES NOT SUPPORT MULTI ARBITRARY BLOCKS, MEANING THE SYMBOL | CANNOT BE USED TO CREATE MULTIPLE POSSIBILITIES.</strong>
+-----------
+
+Enjoy ❤️ 
